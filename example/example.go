@@ -1,16 +1,11 @@
-go-tigertonic-yaml-config
-=========================
-
-YAML parsing extension for github.com/rcrowley/go-tigertonic.
-
-To use this, import it for the side-effect of registering the YAML parser with
-go-tigertonic.
-
-
-```Go
 package main
 
 import (
+	"flag"
+	"fmt"
+	"log"
+	"os"
+
 	"github.com/bigkevmcd/go-tigertonic"
 	// Only need this to register itself.
 	_ "github.com/bigkevmcd/go-tigertonic-yaml-config"
@@ -35,4 +30,3 @@ func main() {
 	}
 	log.Printf("%#v\n", c)
 }
-```
